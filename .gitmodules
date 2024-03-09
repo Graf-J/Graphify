@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/Graf-J/GeneratorService.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Graf-J/GraphBuilderUI.git
