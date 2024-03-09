@@ -1,0 +1,21 @@
+version: '3'
+services:
+  generator-service:
+    container_name: 'Generator-Service'
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - graphify-project-volume:/app/projects
+      - C:\Users\Johannes\Programming\GraphifyProjects:/app/outputs
+
+  ui:
+    container_name: 'Graphify-UI'
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - generator-service
+
+volumes:
+  graphify-project-volume:
