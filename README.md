@@ -47,7 +47,7 @@ volumes:
 ```bash
 $ docker-compose up --build
 ```
-#### 4.1) Access the Swagger documentation of the API via http://localhost:8000
+#### 4.1) Access the Swagger documentation of the API via http://localhost:8000/docs
 #### 4.2) Access the Web UI via http://localhost:3000
 
 ### 5) Run a generated Project
@@ -58,5 +58,9 @@ $ cd <project-name>
 And run the project:
 ```bash
 $ docker-compose up --build
+```
+Please wait until the following message appears in the logs of the docker container to ensure the JanusGraph instance is up and running:
+```
+Channel started at port 8182.
 ```
 #### 5.1) Access the GraphiQL web interface via http://localhost:5000/graphql. Replace the port of the URL with the port specified when building the project previously.
